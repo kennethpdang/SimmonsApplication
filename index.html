@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Website</title>
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <!-- Local Libraries -->
+  <link rel="stylesheet" href="libs/prism/prism.css" />
+  <link rel="stylesheet" href="libs/katex/katex.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="posts.html">Posts</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <!-- Biography Section -->
+    <section id="bio">
+      <div class="bio-content">
+        <img src="assets/images/professional_picture.jpg" alt="Professional Picture" />
+        <div class="bio-text">
+          <h1>About Me</h1>
+          <p>
+            Hello, I am [Your Name]. This is a brief autobiography describing my background and passions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements Section with Diagonal Transition -->
+    <section id="achievements">
+      <div class="diagonal-divider"></div>
+      <div class="achievements-content">
+        <h2>Notable Achievements</h2>
+        <p>
+          Here are some highlights from my CV and career achievements.
+        </p>
+      </div>
+    </section>
+
+    <!-- Interactive Oscillating Grid Section -->
+    <section id="interactive-grid">
+      <canvas id="gridCanvas"></canvas>
+    </section>
+  </main>
+  <!-- JavaScript Files -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/grid.js"></script>
+</body>
+</html>

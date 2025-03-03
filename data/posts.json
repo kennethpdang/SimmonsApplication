@@ -1,0 +1,15 @@
+{
+    "posts": [
+      {
+        "title": "My First Post",
+        "date": "2025-03-02",
+        "content": "<p>This is a sample post with a code snippet:</p><pre><code class=\"language-javascript\">function greet() { return 'Hello World'; }</code></pre><p>Here is a quote:</p><blockquote>Be yourself; everyone else is already taken.</blockquote><p>And some LaTeX: \\( E = mc^2 \\)</p>"
+      },
+      {
+        "title": "Another Post",
+        "date": "2025-03-02",
+        "content": "<p>This post contains more details and another code snippet:</p><pre><code class=\"language-python\">def greet():\n    return 'Hello World'</code></pre>"
+      }
+    ]
+  }
+  
