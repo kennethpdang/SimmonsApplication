@@ -17,15 +17,27 @@
       </ul>
     </nav>
   </header>
-  <main>
+  <main class="post-main">
     <section id="posts">
       <h1>Posts</h1>
-      <div id="postsContainer"></div>
+      <div id="postsContainer" class="post-grid">
+        <!-- Posts will be dynamically added here -->
+      </div>
     </section>
   </main>
+  
+  <!-- Modal for full post content -->
+  <div id="postFullView" class="post-full">
+    <div class="post-full-container">
+      <button id="closePostBtn" class="post-close-btn">&times;</button>
+      <div id="postFullContent"></div>
+    </div>
+  </div>
+  
   <!-- Local Libraries for Syntax Highlighting and LaTeX -->
   <script src="libs/prism/prism.js"></script>
   <script src="libs/katex/katex.js"></script>
+  <script src="libs/katex/auto-render.js"></script>
   <!-- Custom JS for Posts -->
   <script src="assets/js/posts.js"></script>
 </body>
