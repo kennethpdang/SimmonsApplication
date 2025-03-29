@@ -1,367 +1,381 @@
-/* Reset default margins and paddings */
-body,
-html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #302f2f;
-    color: white;
+/* ================= Global Styles ================= */
+/* Reset defaults and typography */
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	background-color: #302f2f;
+	color: white;
 }
 
-/* Header and Navigation */
+/* Generic anchor styling */
+a {
+	color: white !important;
+	text-decoration: none;
+}
+
+i:hover {
+    scale: 1.2;
+}
+
+/* ================= Header & Navigation ================= */
 header {
-    background: #212121;
-    color: #fff;
-    padding: 1rem;
+	background: #212121;
+	color: #fff;
+	padding: 1rem;
 }
 
 nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 nav ul li {
-    margin: 0 1rem;
+	margin: 0 1rem;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-/* Biography Section */
+/* ================= Biography Section ================= */
 #bio .bio-content {
-    position: relative;
-    display: block;
-    min-height: 800px; /* Give it a minimum height */
-    overflow: hidden;
+	position: relative;
+	display: block;
+	min-height: 800px;
+	/* Give it a minimum height */
+	overflow: hidden;
 }
 
 #bio img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* This ensures the image covers the container without distortion */
-    z-index: 1;
-    object-position: center 30%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	/* Ensures the image covers the container without distortion */
+	z-index: 1;
+	object-position: center 30%;
 }
 
 #bio .bio-text {
-    position: absolute; /* Absolute positioning for precise control */
-    top: 50%; /* Position at 50% from the top */
-    left: 50%; /* Position at 50% from the left */
-    transform: translate(-50%, -50%); /* This centers the element perfectly */
-    padding: 2rem;
-    color: white;
-    z-index: 2;
-    background-color: rgba(0, 0, 0, 0.7);
-    max-width: 600px;
-    border-radius: 8px;
-    text-align: center; /* Optional: Centers the text inside the container */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 2rem;
+	color: white;
+	z-index: 2;
+	background-color: rgba(0, 0, 0, 0.7);
+	max-width: 600px;
+	border-radius: 8px;
+	text-align: center;
 }
 
-/* Achievements Section (updated to reflect new structure) */
+/* ================= Achievements Section ================= */
 #achievements {
-    background: #f4f4f4;
-    position: relative;
+	background: #f4f4f4;
+	position: relative;
 }
 
 .achievements-content {
-    padding: 2rem;
+	background: #212121;
+	padding: 2rem;
+	position: relative;
+	color: white;
 }
 
-/* This approach uses clip-path to create a clean diagonal cut */
+/* Diagonal divider for achievements */
 .diagonal-wrapper {
-    position: absolute;
-    width: 100%;
-    height: 4rem; /* Height of the diagonal area */
-    background: transparent;
-    margin-bottom: 0;
-    overflow: hidden;
-    bottom: 0;
+	position: absolute;
+	width: 100%;
+	height: 4rem;
+	background: transparent;
+	margin-bottom: 0;
+	overflow: hidden;
+	bottom: 0;
 }
 
 .diagonal-divider {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    bottom: 0;
-    background: #212121; /* Same as achievements background */
-    clip-path: polygon(0 100%, 100% 100%, 100% 0%, 0 100%);
-    z-index: 1;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	bottom: 0;
+	background: #212121;
+	clip-path: polygon(0 100%, 100% 100%, 100% 0%, 0 100%);
+	z-index: 1;
 }
 
-.achievements-content {
-    background: #212121;
-    padding: 2rem;
-    position: relative;
-    color: white;
+/* ================= Posts Section ================= */
+.post-main {
+    margin-bottom: 20px;
 }
 
-/* Posts Section */
 #posts {
-    max-width: 800px;
-    margin: 0 auto;
+	max-width: 800px;
+	margin: 0 auto;
 }
 
 .post {
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #ccc;
+	margin-bottom: 2rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #ccc;
 }
 
-/* Interactive Grid Section */
+.post-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.post-card {
+	border-radius: 12px;
+	border: 1px solid #e1e1e1;
+	overflow: hidden;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	cursor: pointer;
+	background: #fff;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+	position: relative;
+	height: 240px;
+}
+
+.post-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 12px 16px rgba(0, 0, 0, 0.1);
+}
+
+.post-card-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.post-card-content {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 1.5rem;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 70%, transparent 100%);
+	color: white;
+}
+
+.post-card-title {
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+	font-size: 1.5rem;
+	color: white;
+}
+
+.post-card-date {
+	color: #ccc;
+	font-size: 0.9rem;
+	margin-bottom: 0.5rem;
+}
+
+.post-card-description {
+	color: #eee;
+	line-height: 1.4;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+/* ================= Interactive Grid Section ================= */
 #interactive-grid {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    background: #212121;
-    width: 100%;
-    height: 400px; /* Set a fixed height */
+	position: relative;
+	display: flex;
+	justify-content: center;
+	background: #212121;
+	width: 100%;
+	height: 400px;
 }
 
 #gridCanvas {
-    position: absolute;
-    width: 100%;
-    height: 100%; /* Full height of the container */
-    top: 0;
-    left: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
 }
 
-/* Grid-to-achievements transition */
+/* Transition overlay for grid to achievements */
 .grid-fade-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    /* background: linear-gradient(to bottom, #212121 0%, rgba(244, 244, 244, 0.7) 50%, transparent 100%); */
-    z-index: 3;
-    pointer-events: none; /* Allow mouse events to pass through to the canvas */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	/* background: linear-gradient(to bottom, #212121 0%, rgba(244, 244, 244, 0.7) 50%, transparent 100%); */
+	z-index: 3;
+	pointer-events: none;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 600px) {
-    #bio .bio-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #bio img {
-        margin-right: 0;
-        margin-bottom: 1rem;
-    }
-}
-
+/* ================= Utility & Miscellaneous ================= */
 .flipped-text {
-    display: inline-block;
-    transform: rotate(180deg);
+	display: inline-block;
+	transform: rotate(180deg);
 }
 
+/* Blockquote Styles */
 .blockquote {
-    padding-left: 2rem;
-    position: relative;
-    overflow: hidden;
+	padding-left: 2rem;
+	position: relative;
+	overflow: hidden;
 }
 
 .blockquote::before,
 .blockquote::after {
-    position: absolute;
-    color: #777;
+	position: absolute;
+	color: #777;
 }
 
 .blockquote p {
-    margin: 0;
+	margin: 0;
 }
 
-.blockquote p + p {
-    margin-top: 1rem;
+.blockquote p+p {
+	margin-top: 1rem;
 }
 
 .blockquote--slashes::before {
-    content: "//";
-    transform: rotate(90deg);
-    left: 0;
+	content: "//";
+	transform: rotate(90deg);
+	left: 0;
 }
 
 .blockquote--slashes::after {
-    content: "";
-    left: 5px;
-    top: 25px;
-    width: 1px;
-    height: 100%;
-    background-color: currentColor;
+	content: "";
+	left: 5px;
+	top: 25px;
+	width: 1px;
+	height: 100%;
+	background-color: currentColor;
 }
 
 .blockquote--classic::before {
-    content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='%23777777'><path d='M9.983 3v7.391C9.983 16.095 6.252 19.961 1 21l-.995-2.151C2.437 17.932 4 15.211 4 13H0V3h9.983zM24 3v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151C16.437 17.932 18 15.211 18 13h-3.983V3H24z'/></svg>");
-    left: 0;
+	content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='%23777777'><path d='M9.983 3v7.391C9.983 16.095 6.252 19.961 1 21l-.995-2.151C2.437 17.932 4 15.211 4 13H0V3h9.983zM24 3v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151C16.437 17.932 18 15.211 18 13h-3.983V3H24z'/></svg>");
+	left: 0;
 }
 
 .blockquote--classic::after {
-    content: "";
-    left: 5px;
-    top: 25px;
-    width: 1px;
-    height: 100%;
-    background-color: currentColor;
+	content: "";
+	left: 5px;
+	top: 25px;
+	width: 1px;
+	height: 100%;
+	background-color: currentColor;
 }
 
-blockquote + blockquote {
-    margin-top: 5rem;
+blockquote+blockquote {
+	margin-top: 5rem;
 }
 
-.post-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.post-card {
-    border-radius: 12px;
-    border: 1px solid #e1e1e1;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    position: relative; /* Make it relative for absolute positioning of content */
-    height: 240px; /* Adjust height as needed */
-}
-
-.post-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.1);
-}
-
-.post-card-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.post-card-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 1.5rem;
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 70%, transparent 100%);
-    color: white; /* Make text white for better contrast */
-}
-
-.post-card-title {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-size: 1.5rem;
-    color: white;
-}
-
-.post-card-date {
-    color: #ccc; /* Lighter color for better visibility */
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-}
-
-.post-card-description {
-    color: #eee; /* Light color for description */
-    line-height: 1.4;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-}
-
-/* Fix for close button in modal */
-.post-close-btn {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: white; /* Make it white */
-    opacity: 1; /* Always visible */
-    z-index: 1001; /* Make sure it's on top */
-}
-
-.post-close-btn:hover {
-    color: #ddd; /* Slightly darker on hover */
-}
-
-/* Full post styles */
+/* ================= Modal & Full Post Styles ================= */
 .post-full {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-    overflow-y: auto;
-    padding: 2rem;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 1000;
+	overflow-y: auto;
+	padding: 2rem;
 }
 
 .post-full-container {
-    position: relative;
-    max-width: 800px;
-    margin: 2rem auto;
-    background: #302f2f;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	position: relative;
+	max-width: 800px;
+	margin: 2rem auto;
+	background: #302f2f;
+	border-radius: 12px;
+	padding: 2rem;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .post-full-header {
-    display: flex;
-    margin-bottom: 2rem;
+	display: flex;
+	margin-bottom: 2rem;
 }
 
 .post-full-image {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    float: left; /* Changed to left */
-    margin: 0 1rem 1rem 0; /* Updated margins for left alignment */
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 8px;
+	float: left;
+	margin: 0 1rem 1rem 0;
 }
 
 .post-full-title {
-    margin-top: 0;
+	margin-top: 0;
 }
 
 .post-full-date {
-    color: #777;
-    margin-bottom: 1rem;
+	color: #777;
+	margin-bottom: 1rem;
 }
 
+/* Close button for modal */
 .post-close-btn {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #ffffff;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	background: none;
+	border: none;
+	font-size: 2rem;
+	cursor: pointer;
+	color: white;
+	z-index: 1001;
 }
 
 .post-close-btn:hover {
-    color: #ffffff;
+	color: #ddd;
 }
 
 body.modal-open {
-    overflow: hidden;
+	overflow: hidden;
 }
 
-a {
-    color: white !important;
+/* ================= Footer Styles ================= */
+.site-footer {
+	background: #212121;
+	/* Same as the navigation bar */
+	color: white;
+	text-align: center;
+	padding: 1rem;
+}
+
+.site-footer p {
+	margin: 0;
+}
+
+.site-footer .footer-icons {
+	margin-top: 0.5rem;
+}
+
+.site-footer .footer-icons a {
+	margin: 0 0.5rem;
+	text-decoration: none;
+	color: white;
+	font-size: 1.5rem;
+}
+
+/* ================= Responsive Styles ================= */
+@media (max-width: 600px) {
+	#bio .bio-content {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#bio img {
+		margin-right: 0;
+		margin-bottom: 1rem;
+	}
 }

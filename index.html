@@ -1,60 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Website</title>
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <!-- Local Libraries -->
-  <link rel="stylesheet" href="libs/prism/prism.css" />
-  <link rel="stylesheet" href="libs/katex/katex.css" />
-</head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="posts.html">Posts</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <!-- Biography Section -->
-    <section id="bio">
-      <div class="bio-content">
-        <img src="assets/images/professional_picture.jpg" alt="Professional Picture" />
-        <div class="bio-text">
-          <h1>About Me</h1>
-          <p>
-            I'm a fourth year graduate student at the University of Houston focusing in finite element analysis and numerical methods under my advisor <a href="https://www.math.uh.edu/~lcappan/">Loic Cappanera</a> 🥐👨‍🎨. I love my Lord and saviour Jesus Christ from Nazareth. I love my wife Amanda Simmons and my daughter Audrey Jean Simmons. I love my best friend Kenneth Ching Chong Dang. 
-          </p>
-        </div>
-        <!-- Move the diagonal wrapper inside bio-content -->
-        <div class="diagonal-wrapper">
-          <div class="diagonal-divider"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Achievements Section without the Diagonal Transition (since we moved it) -->
-    <section id="achievements">
-      <div class="achievements-content">
-        <h2>Notable Achievements</h2>
-        <p>
-          Here are some highlights from my CV and career achievements: <br> • I was born. <br> • I learn to drink breast milk. <br> • I learn to walk. <br> • It was a hard one, but after 8 years of my life, I finally learn how to talk. <br> • I learn how to talk again, but now to girls (that's how I met my lovely wife!) <br> • I became a child of God (this is actually a good one) <br> • I learn the art of dank meme-ing. <br> • I built a time machine because I had regret not meeting Kenneth sooner and making him the best man at my wedding, so I built a freaking time machine and then flew back into time and then stalked Kenneth and introduce myself to him and made him the best man at my wedding. <br> <span class = "flipped-text">  I worked at Sandia National Labratories (but who really cares about this point). • </span>
-        </p>
-      </div>
-    </section>
-
-    <!-- Interactive Oscillating Grid Section -->
-    <section id="interactive-grid">
-      <div class="grid-fade-overlay"></div>
-      <canvas id="gridCanvas"></canvas>
-    </section>
-  </main>
-  <!-- JavaScript Files -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/grid.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>My Website</title>
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <!-- Local Libraries -->
+        <link rel="stylesheet" href="libs/prism/prism.css" />
+        <link rel="stylesheet" href="libs/katex/katex.css" />
+        <link rel="stylesheet" href="libs/fontawesome/css/all.min.css" />
+        <!-- Inline style to hide the page until components load -->
+        <style>
+            body.preload {
+                display: none;
+            }
+        </style>
+    </head>
+    <body class="preload">
+        <!-- Placeholders for reusable components -->
+        <div id="navbar"></div>
+        <main>
+            <!-- Biography Section -->
+            <section id="bio">
+                <div class="bio-content">
+                    <img src="assets/images/professional_picture.jpg" alt="Professional Picture" />
+                    <div class="bio-text">
+                        <h1>About Me</h1>
+                        <p> I'm a fourth year graduate student at the University of Houston focusing in finite element analysis and numerical methods under my advisor <a href="https://www.math.uh.edu/~lcappan/">Loic Cappanera</a> 🥐👨‍🎨. I love my Lord and saviour Jesus Christ from Nazareth. I love my wife Amanda Simmons and my daughter Audrey Jean Simmons. I love my best friend Kenneth Ching Chong Dang. </p>
+                    </div>
+                    <div class="diagonal-wrapper">
+                        <div class="diagonal-divider"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- Achievements Section -->
+            <section id="achievements">
+                <div class="achievements-content">
+                    <h2>Notable Achievements</h2>
+                    <p> Here are some highlights from my CV and career achievements: <br> • I was born. <br> • I learn to drink breast milk. <br> • I learn to walk. <br> • It was a hard one, but after 8 years of my life, I finally learn how to talk. <br> • I learn how to talk again, but now to girls (that's how I met my lovely wife!) <br> • I became a child of God (this is actually a good one) <br> • I learn the art of dank meme-ing. <br> • I built a time machine because I had regret not meeting Kenneth sooner and making him the best man at my wedding, so I built a freaking time machine and then flew back into time and then stalked Kenneth and introduced myself to him and made him the best man at my wedding. <br>
+                        <span class="flipped-text">I worked at Sandia National Labratories (but who really cares about this point). • </span>
+                    </p>
+                </div>
+            </section>
+            <!-- Interactive Oscillating Grid Section -->
+            <section id="interactive-grid">
+                <div class="grid-fade-overlay"></div>
+                <canvas id="gridCanvas"></canvas>
+            </section>
+        </main>
+        <!-- Placeholder for footer if desired -->
+        <div id="footer"></div>
+        <!-- JavaScript Files -->
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/grid.js"></script>
+    </body>
 </html>
